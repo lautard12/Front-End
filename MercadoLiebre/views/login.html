@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenidxs a MercadoLiebre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="main-header-top-bar">
+                <img src="/images/logo-mercado-liebre.svg" class="logo" >
+                <h2 class="copy-header">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Comprá en cuotas y sin tarjeta de crédito
+                </h2>
+            </div>
+            <a href="#" class="hamburguer-button">
+                <i class="fas fa-bars"></i>
+            </a>
+            <nav class="main-navbar">
+                <ul class="left-navbar">
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+    
+                <ul class="right-navbar">
+                    <li><a href="/register">Creá tu cuenta <i class="fas fa-id-card"></i></a></li>
+                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                    <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+
+            </nav>
+        </header>
+        <main class="login">
+            <section class="section-login">
+                <form action="/" method="POST">
+                    <div class="field-div">
+                        <h2 class="register-h2">Ingresá</h2>
+                    </div>
+                    <div class="field-div">
+                        <label for="user" class="label-field">Nombre de Usuario:</label>
+                        <input type="text" name="user" id="user" placeholder="Nombre de Usuario" class="field-text" minlength="3">
+                    </div>
+                    <div class="field-div">
+                        <label for="password" class="label-field">Password:</label>
+                        <input type="password" name="pass" id="pass" placeholder="Elegí tu contraseña" class="field-text" minlength="8">
+                    </div>    
+
+
+                    <div class="field-button-login">
+                        <input type="submit" value="Enviar" class="button-login"> 
+                    </div>
+
+
+                </form>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
