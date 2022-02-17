@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:ital,wght@0,300;0,400;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap');
+
+*{
+    list-style: none;
+}
+
+
+body{
+    font-family: "roboto";
+}
+
+.ofertas{
+    background-color:#222222;
+    color: white;
+}
+
+.navbar{
+    background-color:#F0A83E;
+}
+
+.logo h1{
+    display: inline-block;
+    color: #3C2313;
+}
+
+.logo h1 span{
+    color: #ffff;
+}
+
+
+.menu a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.banner{
+    background-image: url("../img/bowl-and-pet-daities-on-green-background\ 1.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 500px;
+}
+
+.banner h2, h3{
+    text-align: center;
+}
+
+.banner p{
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+}
+
+.container{
+    background: #E5E5E5;
+}
+
+.container p{
+    color: #3C2313;
+}
+
+.container h4{
+    color: #F0A83E; 
+}
+
+footer{
+    background-color: #3C2313;
+}
+
+.info i{
+    color: white;
+    font-size: 3rem;
+}
+
+.info h2{
+    color: #ffff;
+}
+
+.info p{
+    color: #8A8787;
+}
+
+.logo-2 h1{
+    display: inline-block;
+    color: #ffff;
+}
+
+.logo-2 h1 span{
+    color: #F0A83E;
+}
+
+.copyright {
+    background-color: #F0A83E;
+}
+
+.copyright p{
+    color: white;
+    text-align: center;
+}

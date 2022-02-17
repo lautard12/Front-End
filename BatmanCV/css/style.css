@@ -1,60 +1,37 @@
-.section{
-    margin: 0 auto;
-    margin-bottom: 100px;
-    width: 70%;
-    background-color: white;
-}
 
-body{
-    background-color:#E5E5E5;
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0 auto;
-   
-}
-.logo{
+header{
+    background-color: #E5E5E5;
     text-align: center;
 }
-.section{
-    margin: 0 auto;
-    width: 70%;
-    background-color: white;
-}
-
-.cuerpo{
-    margin-top: 100px;
-    background-color: white;
-}
-h1{
-    text-align: center;
-    background-color: #C4C4C4;
+h1, h2{
+    background-color: #c4c4c4;
     color: #005677;
-    margin: 0 auto;
-    letter-spacing: 0.15em;
+    letter-spacing: 10px;
     text-transform: uppercase;
 }
-h2{
-    color: #005677;
-    background-color:#C4C4C4;
-    letter-spacing: 0.15em;
-    text-transform:uppercase;
-}
-span{
-    font-weight: bold;
-}
-.pie{
-    text-align: center;
-    background-color: white;
-}
-h3{
-    color: white;
-    background-color:#005677;
-    letter-spacing: 0.15em;
-    text-transform:uppercase;
-}
-.datos{
-    margin-left: 15px;
+
+.container{
+    margin: 6rem auto;
+    width: 70%;
 }
 
+span{
+    font-weight: 900;
+}
+
+.personal span{
+    font-style: italic;
+}
+
+
+/* Footer */
 footer{
-    margin: 0 auto;
+    background-color: #005677;
+    color: #FFF;
+    text-align: center;
+}
+
+i{
+    background-color: black;
+    margin: .3rem;
 }
