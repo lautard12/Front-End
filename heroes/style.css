@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:ital,wght@0,300;0,400;1,700&family=Oxygen:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.descuentos p{
+    font-size: 15px;
+}
+
+.descuentos{
+    background-color:#1CD1B0;
+    padding: 10px 10px;
+}
+
+header{
+    background-color: #00669F;
+}
+
+header h1{
+    padding: 20px 10px;
+}
+
+.card{
+    height: 300px;
+    width: 529px;
+    margin: 100px 50px;
+}
+
+.card .card-img{
+    height: 100px;
+    width: 100px;
+}
+
+.card-text{
+    background-image: url(/img/849bfede3a5193c34ab8a00379e64fa2\ 1.png);
+    background-repeat: no-repeat;
+}
+
+.card-text img{
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left: 90px;
+}
+
+.card-text h2{
+    padding-top: 80px;
+    text-align: center;
+}
+
+    /* .card-text p{
+        text-align: ;
+    } */
