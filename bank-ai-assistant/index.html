@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankIA - Tu Asistente Financiero Inteligente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Pantalla de Inicio -->
+    <div id="home-screen" class="screen active">
+        <div class="container">
+            <div class="hero">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="url(#gradient1)"/>
+                        <path d="M30 15L40 25H35V40H25V25H20L30 15Z" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient1" x1="0" y1="0" x2="60" y2="60">
+                                <stop offset="0%" stop-color="#667eea"/>
+                                <stop offset="100%" stop-color="#764ba2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1 class="hero-title">BankIA</h1>
+                <p class="hero-subtitle">Tu asistente financiero inteligente</p>
+                <p class="hero-description">
+                    Descubre productos personalizados que se adaptan a tu estilo de vida
+                </p>
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">💳</div>
+                    <h3>Productos a tu medida</h3>
+                    <p>Tarjetas, préstamos y seguros adaptados a tu perfil</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Recomendaciones inteligentes</h3>
+                    <p>IA que analiza tus hábitos y necesidades</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Contratación instantánea</h3>
+                    <p>Activa productos en menos de 2 minutos</p>
+                </div>
+            </div>
+
+            <button class="btn btn-primary btn-large" onclick="startChat()">
+                <span>Empezar conversación</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+
+            <div class="disclaimer">
+                <p>Simulación de prototipo - Datos de ejemplo</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Chat -->
+    <div id="chat-screen" class="screen">
+        <div class="chat-container">
+            <!-- Header del Chat -->
+            <div class="chat-header">
+                <button class="btn-back" onclick="goHome()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <div class="chat-header-info">
+                    <h2>Asistente BankIA</h2>
+                    <p class="status">
+                        <span class="status-dot"></span>
+                        En línea
+                    </p>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="btn-icon" onclick="toggleProfile()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mensajes del Chat -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- Los mensajes se agregan dinámicamente -->
+            </div>
+
+            <!-- Panel de Sugerencias Rápidas -->
+            <div class="quick-suggestions" id="quick-suggestions">
+                <!-- Sugerencias dinámicas -->
+            </div>
+
+            <!-- Input del Chat -->
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input
+                        type="text"
+                        id="chat-input"
+                        class="chat-input"
+                        placeholder="Escribe tu consulta..."
+                        autocomplete="off"
+                    >
+                    <button class="btn-send" id="send-btn" onclick="sendMessage()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Productos Recomendados -->
+    <div id="products-screen" class="screen">
+        <div class="products-container">
+            <div class="products-header">
+                <button class="btn-back" onclick="backToChat()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h2>Productos Recomendados</h2>
+            </div>
+
+            <div class="recommendation-reason" id="recommendation-reason">
+                <!-- Razón de recomendación dinámica -->
+            </div>
+
+            <div class="products-list" id="products-list">
+                <!-- Productos dinámicos -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de Contratación -->
+    <div id="contract-screen" class="screen">
+        <div class="contract-container">
+            <div class="contract-header">
+                <button class="btn-back" onclick="backToProducts()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <h2>Contratar Producto</h2>
+            </div>
+
+            <div class="contract-content" id="contract-content">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Perfil de Usuario -->
+    <div id="profile-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Perfil del Cliente</h3>
+                <button class="btn-close" onclick="toggleProfile()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body" id="profile-content">
+                <!-- Contenido del perfil -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Éxito -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content modal-success">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                    <circle cx="40" cy="40" r="40" fill="#10B981"/>
+                    <path d="M25 40L35 50L55 30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>¡Contratación Exitosa!</h2>
+            <p id="success-message"></p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">Entendido</button>
+        </div>
+    </div>
+
+    <script src="js/aiEngine.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
