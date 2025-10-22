@@ -76,8 +76,8 @@ function startChat() {
     const chatMessages = document.getElementById('chat-messages');
     if (!chatMessages.querySelector('.message')) {
         setTimeout(() => {
-            addMessage('bot', `¡Hola ${clientProfile.name}! 👋\n\nSoy tu asistente financiero inteligente. Estoy aquí para ayudarte a encontrar los productos perfectos para ti.\n\n¿En qué puedo ayudarte hoy?`);
-            updateQuickSuggestions('initial');
+            addMessage('bot', `¡Hola ${clientProfile.name}! 👋\n\nSoy tu asistente financiero inteligente. Estoy aquí para ayudarte a encontrar los productos perfectos para ti.\n\nContame, ¿qué necesitás o qué te gustaría hacer con tus finanzas?`);
+            // updateQuickSuggestions('initial');
         }, 500);
     }
 
@@ -208,7 +208,7 @@ async function sendMessage() {
 
         // Actualizar stage de conversación
         appState.conversationStage = 'afterRecommendation';
-        updateQuickSuggestions('afterRecommendation');
+        // updateQuickSuggestions('afterRecommendation');
     }
 
     // Rehabilitar input

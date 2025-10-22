@@ -490,7 +490,7 @@ body {
     padding: var(--spacing-sm) var(--spacing-md);
     background: white;
     border-top: 1px solid var(--border);
-    display: flex;
+    display: none; /* Oculto para experiencia más conversacional */
     gap: var(--spacing-sm);
     overflow-x: auto;
     scrollbar-width: none;

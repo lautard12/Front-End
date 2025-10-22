@@ -321,7 +321,7 @@ function closeSuccessModal() {
     // Agregar mensaje de confirmación
     setTimeout(() => {
         addMessage('bot', '¡Felicitaciones! Tu producto fue activado exitosamente. ¿Hay algo más en lo que pueda ayudarte?');
-        updateQuickSuggestions('afterContract');
+        // updateQuickSuggestions('afterContract');
     }, 300);
 }
 
